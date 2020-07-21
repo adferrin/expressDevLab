@@ -1,0 +1,14 @@
+<%- include('../partial/header.ejs')%>
+<body>
+    <h1>Here are my skills</h1>
+    <ul>
+        <% skills.forEach(function(skill, idx) { %>
+            <li>
+                <a href='/skills/<%=idx %>'> <%= skill.text %></a>
+                -
+                <%= skill.done ? "Done" : "Not done" %>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
